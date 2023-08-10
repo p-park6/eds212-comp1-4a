@@ -11,5 +11,5 @@ rain <-  c(3,5,7,9)
 rain_scaled <- 5 * rain
 #this stores the scalar rain vector
 ```
-
+for git messages, you want them to be concise, meaningful, and searchable
 
