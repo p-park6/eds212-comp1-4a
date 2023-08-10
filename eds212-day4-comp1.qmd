@@ -44,6 +44,51 @@ matrixA <- matrix(data = seq(from = 2, to = 5, length = 10),
 #adding or subtracting matrix
 my_matrix + matrixA
 ```
-#Matrix multiplication
+#Matrix Multiplication
+```{r}
+cats <- matrix(data = c(1,3,5,7), 
+               nrow = 2, 
+               ncol = 2, 
+               byrow = TRUE)
+#create matrix of cats
+dogs <- matrix(data = c(2,4,6,8), 
+               nrow = 2, 
+               ncol = 2, 
+               byrow = TRUE)
+#create matrix of dogs
+cats %*% dogs
+```
+
+#Leslie matrix example
+```{r}
+insect_leslie <- matrix(data = c(0, 0 ,600 ,0.2 ,0 ,0 ,0 ,0.08 ,0), 
+                        nrow = 3, 
+                        ncol = 3,
+                        byrow = TRUE)
+#create leslie matrix
+insect_y0 <- c(12000, 700, 500)
+#setting up our initial condition
+```
+
+## Find the population structure for each life stage at t = 1 year:
+```{r}
+#we are now using the dot product to find the population at year 1
+insect_y1 <- insect_leslie %*% insect_y0
+insect_y1
+```
+## Find population structure at year 1
+```{r}
+insect_y2 <- insect_leslie %*% insect_y1
+insect_y2
+```
+
+notes to self: if you wanted to input just the year, i think you would have to add a forloop
+  update: that is what allison said :D
+
+
+
+
+
+
 
 
