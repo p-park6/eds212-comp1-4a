@@ -1,0 +1,15 @@
+---
+title: "eds212-day4-comp1"
+format: html
+editor: visual
+---
+
+# Create Vectors
+```{r}
+rain <-  c(3,5,7,9)
+#making a vector and storing it in rain
+rain_scaled <- 5 * rain
+#this stores the scalar rain vector
+```
+
+
